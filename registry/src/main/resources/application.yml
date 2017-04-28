@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: registry
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://registry:${server.port}/eureka/
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true

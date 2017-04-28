@@ -1,0 +1,21 @@
+server:
+  port: 8888
+
+management:
+  context-path: /admin
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    status-page-url-path: /admin/info
+    health-check-url-path: /admin/health
+
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared
+security:
+  user:
+    password: ${CONFIG_SERVICE_PASSWORD:dev}

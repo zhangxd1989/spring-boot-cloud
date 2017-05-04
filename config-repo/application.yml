@@ -1,7 +1,9 @@
 eureka:
+  instance:
+    hostname: registry
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+    service-url:
+      defaultZone: http://user:password@registry:8761/eureka/
 
 ---
 spring:

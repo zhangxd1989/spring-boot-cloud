@@ -24,7 +24,7 @@ zuul:
         url: http://auth-service:5000
         stripPrefix: false
         sensitiveHeaders:
-    a-service:
+    svca-service:
           path: /**
           serviceId: svca-service
 

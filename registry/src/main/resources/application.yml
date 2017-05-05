@@ -5,15 +5,12 @@ eureka:
   instance:
     hostname: registry
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    registerWithEureka: false
+    fetchRegistry: false
     service-url:
-      defaultZone: http://registry:${server.port}/eureka/
-  server:
-    wait-time-in-ms-when-sync-empty: 0
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
 
-spring:
-  cloud:
-    config:
-      discovery:
-        enabled: true
+security:
+  user:
+    name: user
+    password: ${REGISTRY_SERVER_PASSWORD:password}

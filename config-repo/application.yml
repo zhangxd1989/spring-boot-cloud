@@ -5,6 +5,14 @@ eureka:
     service-url:
       defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 10000
+
 spring:
   rabbitmq:
     host: localhost

@@ -26,5 +26,5 @@ zuul:
         sensitiveHeaders:
     a-service:
           path: /**
-          serviceId: scva-service
+          serviceId: svca-service
 

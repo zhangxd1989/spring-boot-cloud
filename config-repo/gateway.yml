@@ -14,7 +14,6 @@ ribbon:
   connect-timeout: 20000
 
 zuul:
-  ignoredServices: '*'
   host:
     connect-timeout-millis: 20000
     socket-timeout-millis: 20000

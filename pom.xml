@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>${spring.boot.version}</version>
+        <version>1.5.2.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -32,7 +32,6 @@
         <java.version>1.8</java.version>
         <docker.plugin.version>0.4.13</docker.plugin.version>
         <docker.image.prefix>spring-boot-cloud</docker.image.prefix>
-        <spring.boot.version>1.5.2.RELEASE</spring.boot.version>
         <spring.cloud.version>Dalston.RELEASE</spring.cloud.version>
         <spring-boot-admin.version>1.5.0</spring-boot-admin.version>
     </properties>

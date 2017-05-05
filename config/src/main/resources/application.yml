@@ -1,21 +1,27 @@
 server:
   port: 8888
 
-management:
-  context-path: /admin
-
 eureka:
   instance:
-    lease-renewal-interval-in-seconds: 10
-    status-page-url-path: /admin/info
-    health-check-url-path: /admin/health
+    hostname: registry
+    metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
+  client:
+    service-url:
+      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
 
 spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/shared
+        git:
+          uri: https://github.com/zhangxd1989/spring-boot-cloud
+          search-paths: config-repo
+  rabbitmq:
+    host: localhost
+
 security:
   user:
-    password: ${CONFIG_SERVICE_PASSWORD:dev}
+    name: user
+    password: ${CONFIG_SERVER_PASSWORD:password}

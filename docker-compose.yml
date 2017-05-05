@@ -1,25 +1,6 @@
 version: '2'
 services:
-  config:
+  zipkin:
+    image: openzipkin/zipkin
     ports:
-      - 8888:8888
-    environment:
-      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-    image: spring-boot-cloud/config
-    restart: always
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
-
-  registry:
-    environment:
-      CONFIG_SERVICE_PASSWORD: $CONFIG_SERVICE_PASSWORD
-    image: spring-boot-cloud/registry
-    restart: always
-    ports:
-      - 8761:8761
-    logging:
-      options:
-        max-size: "10m"
-        max-file: "10"
+      - "9411:9411"

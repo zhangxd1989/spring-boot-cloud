@@ -23,8 +23,8 @@
         <module>gateway</module>
         <module>monitor</module>
         <module>auth-service</module>
-        <module>service-a</module>
-        <module>service-b</module>
+        <module>svca-service</module>
+        <module>svcb-service</module>
     </modules>
 
     <properties>

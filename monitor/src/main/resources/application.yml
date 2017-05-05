@@ -1,0 +1,32 @@
+server:
+  port: 8040
+
+turbine:
+  stream:
+    port: 8041
+
+eureka:
+  instance:
+    hostname: registry
+    metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
+  client:
+    service-url:
+      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
+
+spring:
+  rabbitmq:
+    host: localhost
+  boot:
+    admin:
+      routes:
+        endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
+      turbine:
+        clusters: default
+        location: http://${spring.application.name}:${turbine.stream.port}
+
+security:
+  user:
+    name: admin
+    password: ${MONITOR_SERVER_PASSWORD:admin}

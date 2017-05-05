@@ -1,14 +1,17 @@
+server:
+  port: 8060
+
 hystrix:
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 20000
+            timeout-in-milliseconds: 20000
 
 ribbon:
-  ReadTimeout: 20000
-  ConnectTimeout: 20000
+  read-timeout: 20000
+  connect-timeout: 20000
 
 zuul:
   ignoredServices: '*'
@@ -22,6 +25,7 @@ zuul:
         url: http://auth-service:5000
         stripPrefix: false
         sensitiveHeaders:
+    a-service:
+          path: /**
+          serviceId: service-a
 
-server:
-  port: 4000

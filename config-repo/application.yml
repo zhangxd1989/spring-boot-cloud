@@ -3,21 +3,11 @@ eureka:
     hostname: registry
   client:
     service-url:
-      defaultZone: http://user:password@registry:8761/eureka/
+      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
 
----
 spring:
-  profiles: docker
-  cloud:
-    config:
-      uri: http://${CONFIGSERVER_1_PORT_8888_TCP_ADDR:localhost}:8888
-endpoints:
-  restart:
-    enabled: true
-eureka:
-  instance:
-    non-secure-port: 80
-    prefer-ip-address: true
-  client:
-    serviceUrl:
-      defaultZone: http://${EUREKA_1_PORT_8761_TCP_ADDR:localhost}:8761/eureka/
+  rabbitmq:
+    host: localhost
+  sleuth:
+    sampler:
+      percentage: 1

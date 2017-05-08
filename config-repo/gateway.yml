@@ -1,6 +1,18 @@
 server:
   port: 8060
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
 zuul:
   routes:
     auth-service:

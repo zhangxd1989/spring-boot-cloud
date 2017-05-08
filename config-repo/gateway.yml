@@ -16,6 +16,9 @@ ribbon:
 zuul:
   semaphore:
     maxSemaphores: 1000
+  host:
+    max-per-route-connections: 1000
+    max-total-connections: 1000
   ignoredServices: '*'
   routes:
     auth-service:

@@ -13,6 +13,4 @@ zuul:
         stripPrefix: false
         sensitiveHeaders:
     svca-service:
-          path: /**
-          serviceId: svca-service
-
+      path: /**

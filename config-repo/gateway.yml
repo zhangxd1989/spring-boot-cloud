@@ -1,22 +1,10 @@
 server:
   port: 8060
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeout-in-milliseconds: 20000
-
-ribbon:
-  read-timeout: 20000
-  connect-timeout: 20000
-
 zuul:
   host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 10000
 
   routes:
     auth-service:

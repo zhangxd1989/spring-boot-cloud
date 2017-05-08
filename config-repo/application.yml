@@ -1,3 +1,9 @@
+server:
+  tomcat:
+    accept-count: 1000
+    max-threads: 1000
+    max-connections: 2000
+
 eureka:
   instance:
     hostname: registry

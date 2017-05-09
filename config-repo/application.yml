@@ -24,6 +24,8 @@ spring:
   sleuth:
     sampler:
       percentage: 1
+    scheduled:
+      skip-pattern: org.springframework.cloud.netflix.hystrix.stream.HystrixStreamTask
 
 management:
   security:

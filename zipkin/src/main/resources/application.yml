@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: zipkin
+  rabbitmq:
+    host: localhost
+
+server:
+  port: 9411
+
+security:
+  user:
+    name: admin
+    password: admin

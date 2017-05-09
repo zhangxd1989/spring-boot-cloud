@@ -25,6 +25,7 @@
         <module>auth-service</module>
         <module>svca-service</module>
         <module>svcb-service</module>
+        <module>zipkin</module>
     </modules>
 
     <properties>
@@ -45,6 +46,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>asm</artifactId>
+                    <groupId>org.ow2.asm</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

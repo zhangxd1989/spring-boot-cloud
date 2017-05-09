@@ -26,6 +26,8 @@ spring:
       percentage: 1
     integration:
       enabled: false
+    scheduled:
+      enabled: false
 
 management:
   security:

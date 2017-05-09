@@ -27,7 +27,7 @@ spring:
     integration:
       enabled: false
     scheduled:
-      enabled: false
+      skip-pattern: "^org.*HystrixStreamTask$"
 
 management:
   security:

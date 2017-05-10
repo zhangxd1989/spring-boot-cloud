@@ -1,4 +1,4 @@
-package cn.zhangxd.auth.service.security;
+package cn.zhangxd.auth.service;
 
 import cn.zhangxd.auth.entity.User;
 import cn.zhangxd.auth.repository.UserRepository;

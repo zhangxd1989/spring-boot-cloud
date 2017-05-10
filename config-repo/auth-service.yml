@@ -5,11 +5,7 @@ server:
 spring:
   datasource:
     url: jdbc:h2:mem:user
-    username: root
-    password: root
     driver-class-name: org.h2.Driver
     data: classpath:data.sql
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: update

@@ -4,16 +4,12 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/micro?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+    url: jdbc:h2:mem:user
     username: root
     password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: org.h2.Driver
+    data: classpath:data.sql
   jpa:
-    database: MYSQL
     show-sql: true
     hibernate:
       ddl-auto: update
-      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect

@@ -45,15 +45,7 @@
                     <groupId>io.netty</groupId>
                 </exclusion>
                 <exclusion>
-                    <artifactId>netty-buffer</artifactId>
-                    <groupId>io.netty</groupId>
-                </exclusion>
-                <exclusion>
                     <artifactId>netty-codec-http</artifactId>
-                    <groupId>io.netty</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>netty-transport</artifactId>
                     <groupId>io.netty</groupId>
                 </exclusion>
             </exclusions>

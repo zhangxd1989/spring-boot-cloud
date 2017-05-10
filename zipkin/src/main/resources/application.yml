@@ -2,7 +2,7 @@ spring:
   application:
     name: zipkin
   rabbitmq:
-    host: localhost
+    host: rabbitmq
 
 server:
   port: 9411
@@ -10,4 +10,4 @@ server:
 security:
   user:
     name: admin
-    password: admin
+    password: ${ZIPKIN_SERVER_PASSWORD:admin}

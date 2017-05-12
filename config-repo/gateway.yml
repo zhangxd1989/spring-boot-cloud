@@ -13,6 +13,11 @@ ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
 
+authserver:
+  hostname: auth-service
+  port: 5000
+  context-path: uaa
+
 zuul:
   ignoredServices: '*'
   routes:

@@ -3,7 +3,7 @@ eureka:
     hostname: registry
     prefer-ip-address: true
     metadata-map:
-      management.context-path: ${management.context-path}
+      management.context-path: ${server.context-path}
   client:
     service-url:
       defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/

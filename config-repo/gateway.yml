@@ -17,8 +17,9 @@ zuul:
   ignoredServices: '*'
   routes:
     auth-service:
-        path: /uaa/**
-        stripPrefix: false
-        sensitiveHeaders:
+      path: /uaa/**
+      stripPrefix: false
+      sensitiveHeaders:
     svca-service:
       path: /svca/**
+      sensitiveHeaders:

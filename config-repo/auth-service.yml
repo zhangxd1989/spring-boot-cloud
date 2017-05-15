@@ -2,9 +2,6 @@ server:
   context-path: /uaa
   port: 5000
 
-management:
-  context-path: ${server.context-path}
-
 spring:
   datasource:
     url: jdbc:h2:mem:user

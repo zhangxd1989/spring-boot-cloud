@@ -2,3 +2,14 @@ server:
   port: 8080
 
 name: zhangxd
+
+authserver:
+    hostname: auth-service
+    port: 5000
+    contextPath: uaa
+
+spring:
+  oauth2:
+    resource:
+      userInfoUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/current
+      preferTokenInfo: false

@@ -8,8 +8,11 @@ authserver:
     port: 5000
     contextPath: uaa
 
-spring:
+security:
   oauth2:
-    resource:
-      userInfoUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/current
-      preferTokenInfo: false
+    client:
+      clientId: account-service
+      clientSecret: ${ACCOUNT_SERVICE_PASSWORD:password}
+      accessTokenUri: http://localhost:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server

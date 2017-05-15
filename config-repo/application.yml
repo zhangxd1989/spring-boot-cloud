@@ -32,3 +32,8 @@ spring:
 management:
   security:
     enabled: false
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:5000/uaa/current

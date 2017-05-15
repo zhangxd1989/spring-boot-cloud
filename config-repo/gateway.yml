@@ -27,3 +27,7 @@ zuul:
       sensitiveHeaders:
     svca-service:
       path: /svca/**
+      sensitiveHeaders:
+    svcb-service:
+      path: /svcb/**
+      sensitiveHeaders:

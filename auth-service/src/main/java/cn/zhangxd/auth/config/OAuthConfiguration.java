@@ -1,7 +1,5 @@
 package cn.zhangxd.auth.config;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +17,8 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
+
+import javax.sql.DataSource;
 
 @Configuration
 @EnableAuthorizationServer
@@ -63,13 +63,22 @@ public class OAuthConfiguration extends AuthorizationServerConfigurerAdapter {
         clients.jdbc(dataSource)
                 .passwordEncoder(passwordEncoder)
                 .withClient("client")
-                .authorizedGrantTypes("authorization_code", "client_credentials",
-                        "refresh_token", "password", "implicit")
+                .authorizedGrantTypes("authorization_code", "client_credentials", "refresh_token", "password", "implicit")
                 .authorities("ROLE_CLIENT")
-                .resourceIds("apis")
                 .scopes("read")
                 .secret("secret")
-                .accessTokenValiditySeconds(300);
+                .accessTokenValiditySeconds(300)
+                .and()
+                .withClient("svca-service")
+                .secret("password")
+                .authorizedGrantTypes("client_credentials", "refresh_token")
+                .scopes("server")
+                .and()
+                .withClient("svcb-service")
+                .secret("password")
+                .authorizedGrantTypes("client_credentials", "refresh_token")
+                .scopes("server")
+        ;
 
     }
 

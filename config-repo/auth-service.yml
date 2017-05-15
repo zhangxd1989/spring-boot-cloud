@@ -5,6 +5,8 @@ server:
 eureka:
   instance:
     metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
       management.context-path: ${server.context-path}
       health.path: ${server.context-path}/health
 
@@ -14,3 +16,8 @@ spring:
     driver-class-name: org.h2.Driver
   jpa:
     show-sql: true
+
+security:
+  user:
+    name: user
+    password: password

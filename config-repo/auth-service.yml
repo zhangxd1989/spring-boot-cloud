@@ -3,7 +3,7 @@ server:
   port: 5000
 
 management:
-  context-path:
+  context-path: ${server.context-path}
 
 spring:
   datasource:

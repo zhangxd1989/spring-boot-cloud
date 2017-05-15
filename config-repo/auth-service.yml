@@ -8,7 +8,7 @@ eureka:
       user.name: ${security.user.name}
       user.password: ${security.user.password}
       management.context-path: ${server.context-path}
-      health.path: ${server.context-path}/health
+      health.path: uaa/health
 
 spring:
   datasource:

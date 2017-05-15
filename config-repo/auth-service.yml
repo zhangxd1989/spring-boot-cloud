@@ -4,11 +4,11 @@ server:
 
 eureka:
   instance:
+    health-check-url-path: ${server.context-path}/health
     metadata-map:
       user.name: ${security.user.name}
       user.password: ${security.user.password}
       management.context-path: ${server.context-path}
-      health.path: uaa/health
 
 spring:
   datasource:

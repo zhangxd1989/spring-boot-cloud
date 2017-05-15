@@ -6,6 +6,7 @@ eureka:
   instance:
     metadata-map:
       management.context-path: ${server.context-path}
+      health.path: ${server.context-path}/health
 
 spring:
   datasource:

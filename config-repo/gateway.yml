@@ -13,6 +13,11 @@ ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
 
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:5000/uaa/current
+
 zuul:
   ignoredServices: '*'
   routes:

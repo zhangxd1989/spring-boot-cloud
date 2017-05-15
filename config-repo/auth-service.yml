@@ -2,6 +2,11 @@ server:
   context-path: /uaa
   port: 5000
 
+eureka:
+  instance:
+    metadata-map:
+      management.context-path: ${server.context-path}
+
 spring:
   datasource:
     url: jdbc:h2:mem:user

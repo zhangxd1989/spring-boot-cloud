@@ -29,11 +29,12 @@ spring:
     scheduled:
       skip-pattern: "^org.*HystrixStreamTask$"
 
-management:
-  security:
-    enabled: false
+authserver:
+    hostname: auth-service
+    port: 5000
+    contextPath: /uaa
 
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:5000/uaa/current
+      user-info-uri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/current

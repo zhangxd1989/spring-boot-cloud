@@ -3,16 +3,20 @@ server:
 
 name: zhangxd
 
-authserver:
-    hostname: auth-service
-    port: 5000
-    contextPath: uaa
+eureka:
+  instance:
+    metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
 
 security:
+  user:
+    name: user
+    password: password
   oauth2:
     client:
       clientId: svca-service
-      clientSecret: ${SVCA_SERVICE_PASSWORD:password}
-      accessTokenUri: http://localhost:5000/uaa/oauth/token
+      clientSecret: ${security.user.password}
+      accessTokenUri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/oauth/token
       grant-type: client_credentials
       scope: server

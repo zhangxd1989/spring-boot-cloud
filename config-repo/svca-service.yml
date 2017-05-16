@@ -11,8 +11,8 @@ authserver:
 security:
   oauth2:
     client:
-      clientId: account-service
-      clientSecret: ${ACCOUNT_SERVICE_PASSWORD:password}
+      clientId: svca-service
+      clientSecret: ${SVCA_SERVICE_PASSWORD:password}
       accessTokenUri: http://localhost:5000/uaa/oauth/token
       grant-type: client_credentials
       scope: server

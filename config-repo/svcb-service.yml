@@ -2,3 +2,12 @@ server:
   port: 8070
   
 msg: Hello
+
+security:
+  oauth2:
+    client:
+      clientId: svcb-service
+      clientSecret: ${SVCB_SERVICE_PASSWORD:password}
+      accessTokenUri: http://localhost:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server

@@ -4,7 +4,6 @@ services:
       image: rabbitmq:3-management
       restart: always
       ports:
-        - 5673:5672
         - 15673:15672
   registry:
     image: spring-boot-cloud/registry
@@ -26,6 +25,10 @@ services:
     image: spring-boot-cloud/gateway
     ports:
       - "8060:8060"
+  auth-service:
+    image: spring-boot-cloud/auth-service
+    ports:
+      - "5000:5000"
   svca-service:
     image: spring-boot-cloud/svca-service
   svcb-service:

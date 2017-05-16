@@ -22,14 +22,14 @@ eureka:
 
 spring:
   rabbitmq:
-    host: localhost
+    host: rabbitmq
   boot:
     admin:
       routes:
         endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream
       turbine:
         clusters: default
-        location: http://${spring.application.name}:${turbine.stream.port}
+        location: http://monitor:${turbine.stream.port}
 
 security:
   user:

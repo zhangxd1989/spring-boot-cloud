@@ -61,6 +61,7 @@
 //TODO 图片
 ## RabbitMQ 监控
 Docker 启动访问 http://localhost:15673/ 默认账号 guest，密码 guest（本地 rabbit 管理系统默认端口15672）
+![Rabbit](/screenshots/rabbit.jpg)
 # 接口测试
 1. 获取 Token
 ```

@@ -30,7 +30,7 @@
 * svcb-service - 业务服务B
 
 ## 体系架构
-//TODO 架构图
+![architecture](/screenshots/architecture.jpg)
 ## 应用组件
 //TODO 架构图
 

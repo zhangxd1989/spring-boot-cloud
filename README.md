@@ -32,7 +32,7 @@
 ## 体系架构
 ![architecture](/screenshots/architecture.jpg)
 ## 应用组件
-//TODO 架构图
+![components](/screenshots/components.jpg)
 
 # 启动项目
 

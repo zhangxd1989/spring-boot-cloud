@@ -20,7 +20,7 @@
 
 该项目包含 8 个服务
 
-* registry - 服务注册于发现
+* registry - 服务注册与发现
 * config - 外部配置
 * monitor - 监控
 * zipkin - 分布式跟踪
@@ -106,4 +106,8 @@ curl -X POST -vu client:secret http://localhost:8060/uaa/oauth/token -H "Accept:
   "expires_in": 3599,
   "scope": "read write"
 }
+```
+5. 刷新配置
+```
+curl -X POST -vu user:password http://localhost:8888/bus/refresh
 ```

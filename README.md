@@ -1,6 +1,6 @@
 # 基于 Spring Cloud 的微服务架构
 
-本项目是一个基于 Spring Boot、Spring Cloud、Spring Oauth2 和 Netflix OSS 等框架构建的微服务基础架构。
+本项目是一个基于 Spring Boot、Spring Cloud、Spring Oauth2 和 Netflix OSS 等框架构建的微服务项目。
 
 # 技术栈
 * Spring boot - 微服务的入门级微框架，用来简化 Spring 应用的初始搭建以及开发过程。
@@ -72,7 +72,7 @@
 ![monitor](/screenshots/monitor7.jpg)
 ### 查看并使用 JMX
 ![monitor](/screenshots/monitor8.jpg)
-### 查看现成
+### 查看线程
 ![monitor](/screenshots/monitor9.jpg)
 ### 认证历史
 ![monitor](/screenshots/monitor10.jpg)

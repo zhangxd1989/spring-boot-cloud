@@ -52,22 +52,46 @@
 
 ## 注册中心
 访问 http://localhost:8761/ 默认账号 user，密码 password
-//TODO 图片
+
+![registry](/screenshots/registry.jpg)
 ## 监控
 访问 http://localhost:8040/ 默认账号 admin，密码 admin
-//TODO 图片
+### 控制面板
+![monitor](/screenshots/monitor1.jpg)
+### 应用注册历史
+![monitor](/screenshots/monitor2.jpg)
+### Turbine Hystrix面板
+![monitor](/screenshots/monitor3.jpg)
+### 应用信息、健康状况、垃圾回收等详情
+![monitor](/screenshots/monitor4.jpg)
+### 计数器
+![monitor](/screenshots/monitor5.jpg)
+### 查看和修改环境变量
+![monitor](/screenshots/monitor6.jpg)
+### 管理 Logback 日志级别
+![monitor](/screenshots/monitor7.jpg)
+### 查看并使用 JMX
+![monitor](/screenshots/monitor8.jpg)
+### 查看现成
+![monitor](/screenshots/monitor9.jpg)
+### 认证历史
+![monitor](/screenshots/monitor10.jpg)
+### 查看 Http 请求轨迹
+![monitor](/screenshots/monitor11.jpg)
+### Hystrix 面板
+![monitor](/screenshots/monitor12.jpg)
 ## 链路跟踪
 访问 http://localhost:9411/ 默认账号 admin，密码 admin
 ### 控制面板
-![Zipkin](/screenshots/zipkin1.jpg)
+![zipkin](/screenshots/zipkin1.jpg)
 ### 链路跟踪明细
-![Zipkin](/screenshots/zipkin2.jpg)
+![zipkin](/screenshots/zipkin2.jpg)
 ### 服务依赖关系
-![Zipkin](/screenshots/zipkin3.jpg)
+![zipkin](/screenshots/zipkin3.jpg)
 ## RabbitMQ 监控
 Docker 启动访问 http://localhost:15673/ 默认账号 guest，密码 guest（本地 rabbit 管理系统默认端口15672）
 
-![Rabbit](/screenshots/rabbit.jpg)
+![rabbit](/screenshots/rabbit.jpg)
 # 接口测试
 1. 获取 Token
 ```

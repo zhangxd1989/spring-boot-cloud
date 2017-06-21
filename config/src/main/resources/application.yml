@@ -1,24 +1,19 @@
 server:
   port: 8888
 
-eureka:
-  instance:
-    hostname: registry
-    prefer-ip-address: true
-    metadata-map:
-      user.name: ${security.user.name}
-      user.password: ${security.user.password}
-  client:
-    service-url:
-      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
-
 spring:
   cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+      host: registry
+      port: 8500
     config:
       server:
         git:
           uri: https://github.com/zhangxd1989/spring-boot-cloud
           search-paths: config-repo
+          default-label: consul
   rabbitmq:
     host: rabbitmq
 

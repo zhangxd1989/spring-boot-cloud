@@ -1,11 +1,3 @@
-eureka:
-  instance:
-    hostname: registry
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/
-
 hystrix:
   command:
     default:
@@ -19,6 +11,12 @@ ribbon:
   ConnectTimeout: 5000
 
 spring:
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+      host: registry
+      port: 8500
   rabbitmq:
     host: rabbitmq
   sleuth:

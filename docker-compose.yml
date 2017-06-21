@@ -1,14 +1,16 @@
 version: '2'
 services:
   rabbitmq:
-      image: rabbitmq:3-management
-      restart: always
-      ports:
-        - 15673:15672
-  registry:
-    image: spring-boot-cloud/registry
+    image: rabbitmq:3-management
+    restart: always
     ports:
-      - "8761:8761"
+      - "15673:15672"
+  consul:
+    image: consul
+    ports:
+      - "8400:8400"
+      - "8500:8500"
+      - "8600:8600"
   config:
     image: spring-boot-cloud/config
     ports:

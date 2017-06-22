@@ -14,6 +14,7 @@ spring:
     consul:
       discovery:
         prefer-ip-address: true
+        tags: user.name=${security.user.name}, user.password=${security.user.password}
       host: registry
       port: 8500
   rabbitmq:
@@ -25,6 +26,8 @@ spring:
       turbine:
         clusters: default
         location: http://monitor:${turbine.stream.port}
+      discovery:
+        ignored-services: consul
 
 security:
   user:

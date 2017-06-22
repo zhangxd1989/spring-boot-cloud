@@ -4,8 +4,8 @@ import cn.zhangxd.svca.client.ServiceBClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.consul.discovery.ConsulDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +19,8 @@ public class ServiceAController {
     private String name;
 
     @Autowired
-    EurekaDiscoveryClient discoveryClient;
+    ConsulDiscoveryClient discoveryClient;
+
     @Autowired
     private ServiceBClient serviceBClient;
 

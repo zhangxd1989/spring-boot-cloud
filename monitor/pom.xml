@@ -41,6 +41,10 @@
             <artifactId>spring-cloud-starter-turbine-stream</artifactId>
             <exclusions>
                 <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-eureka</artifactId>
+                </exclusion>
+                <exclusion>
                     <artifactId>netty-transport-native-epoll</artifactId>
                     <groupId>io.netty</groupId>
                 </exclusion>
@@ -56,7 +60,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-all</artifactId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

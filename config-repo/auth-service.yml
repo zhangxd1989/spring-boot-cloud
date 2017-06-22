@@ -15,6 +15,11 @@ management:
 #      management.context-path: ${server.context-path}${management.context-path}
 
 spring:
+  cloud:
+    consul:
+      discovery:
+        health-check-path: ${server.context-path}${management.context-path}/health
+        tags: management.context-path=${server.context-path}${management.context-path}
   datasource:
     url: jdbc:h2:mem:user
     driver-class-name: org.h2.Driver

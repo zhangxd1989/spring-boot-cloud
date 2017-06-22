@@ -6,7 +6,6 @@ spring:
     consul:
       discovery:
         prefer-ip-address: true
-        instance-id: ${spring.application.name}:comma,separated,profiles:${server.port}:${random.value}
       host: registry
       port: 8500
     config:

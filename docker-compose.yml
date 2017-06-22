@@ -5,7 +5,7 @@ services:
     restart: always
     ports:
       - "15673:15672"
-  consul:
+  registry:
     image: consul
     ports:
       - "8400:8400"

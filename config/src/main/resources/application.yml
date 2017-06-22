@@ -6,6 +6,7 @@ spring:
     consul:
       discovery:
         prefer-ip-address: true
+        tags: user.name=${security.user.name}, user.password=${security.user.password}
       host: registry
       port: 8500
     config:

@@ -7,13 +7,6 @@ management:
     enabled: false
   context-path: /mgmt
 
-#eureka:
-#  instance:
-#    health-check-url-path: ${server.context-path}${management.context-path}/health
-#    status-page-url-path: ${server.context-path}${management.context-path}/info
-#    metadata-map:
-#      management.context-path: ${server.context-path}${management.context-path}
-
 spring:
   cloud:
     consul:

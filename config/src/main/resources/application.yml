@@ -21,6 +21,9 @@ spring:
           search-paths: config-repo
   rabbitmq:
     host: rabbitmq
+    port: 5672
+    username: admin
+    password: admin
 
 security:
   user:

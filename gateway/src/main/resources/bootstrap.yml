@@ -12,3 +12,8 @@ spring:
         max-interval: 10000
         multiplier: 2
         max-attempts: 10
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: admin
+    password: admin
